@@ -56,6 +56,7 @@ app.get("/goodbye", (req,res) =>{
     res.send("<h1>See ya</h1>")
 })
 
+//grab query parameters from the url
 app.get("/queryex", (req,res) =>{
     const html =
     `<h1>Hello, ${req.query.name}!</h1>
@@ -63,6 +64,7 @@ app.get("/queryex", (req,res) =>{
     res.send(html)
 })
 
+//grab form data or data sent through form inputs
 app.post("/add_backend", (req,res) =>{
     const html =
     `<h1>Hello, ${req.body.name}!</h1>
