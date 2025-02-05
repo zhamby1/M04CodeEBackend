@@ -35,11 +35,13 @@ app.param("username",(req,res,next,username) =>{
     next()
 })
 
+//send a html file as the home page through express.  If front end and backend are separate we wont worry about this
+
 app.get('/', (req,res) =>{
     res.sendFile(path.join(__dirname, 'public/hello.html'))
 })
 
-
+//take the user we created above (const user =) and convert it to json and send it to a html page or another frontend. This is the most common way we will use in class and how most apis work
 app.get("/jsontest", (req,res) =>{
     res.json(user)
 })
